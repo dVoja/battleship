@@ -25,14 +25,13 @@ export function checkIfShipFitsOnTheBoard(x, y, direction, shipLength) {
 export function createCoordinates(x, y, direction, shipLength) {
 
     const vector = mapDirectionToVector(direction)
-
+    const shipCoordinates = [];
     for (let i = 0; i < shipLength; i++) {
         let xCoord = x + vector.x * i;
         let yCoord = y + vector.y * i;
 
-        ships.coordinates.push(xCoord, yCoord);
+        shipCoordinates.push({ xCoord, yCoord })
     }
-}
 
-let a = mapDirectionToVector(1);
-console.log(a);
+    return shipCoordinates
+}

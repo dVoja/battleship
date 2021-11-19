@@ -1,3 +1,4 @@
+import { ships } from "./placeShips.mjs"
 import { createCoordinates } from "./checkIfFits.mjs"
 
 const coordinates = createCoordinates();
